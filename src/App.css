@@ -1,0 +1,156 @@
+.footer {
+    background: #1a1a1a;
+    color: #ccc;
+    padding: 2rem 1rem 1rem;
+    margin-top: auto;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #333;
+    font-size: 0.95rem;
+}
+
+.footer_social-btn {
+    padding: 10px;
+    border: none;
+    color: #fff;
+    font-size: larger;
+}
+
+.footer_col-heading {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    margin-left: 10%;
+    text-decoration: underline #ff6347;
+}
+
+.back-to-top {
+    width: 44px;
+    opacity: 0.6;
+    z-index: 99999999999;
+    position: fixed;
+    bottom: 10px;
+    left: 95%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    /* float: right; */
+}
+
+.back-to-top:hover {
+    opacity: 1;
+}
+
+
+.btn:active {
+    cursor: grabbing;
+}
+
+.navbar {
+    padding: 5px 0px 10px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.navbar_logo {
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    cursor: pointer;
+}
+
+.comic-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 15px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #ff5252;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    cursor: pointer;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.comic-button:hover {
+    background-color: #fff;
+    color: #ff5252;
+    border: 2px solid #ff5252;
+    box-shadow: 5px 5px 0px #ff5252;
+}
+
+.comic-button:active {
+    background-color: #fcf414;
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+.navbar_buts {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.navbar_inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar_actions {
+    margin-left: auto;
+    display: flex;
+    /* position: relative;
+    left: 70%; */
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar_buts:hover {
+    color: #ff6347;
+}
+
+.navbar_buts.active {
+    color: #ff6347;
+    font-weight: bold;
+}
+
+.navbar_logo-dot {
+    font-style: italic;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: #ff6347;
+}
+
+.about-text {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.about-text h4 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}

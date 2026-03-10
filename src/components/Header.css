@@ -1,0 +1,45 @@
+.header-cont {
+    padding: 25px;
+    text-align: center;
+    /* position: relative;
+    left: 45%; */
+}
+
+.header-cont .header_inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header_title {
+    font-size: 5rem;
+    margin-bottom: 10px;
+}
+
+.header_title-highlight {
+    color: grey;
+    transition: all 0.7s;
+}
+
+.header_title-highlight:hover {
+    color: white;
+    cursor: grab;
+}
+
+.header_title-highlight:hover::before {
+    content: "We are open!";
+    color: #858383;
+    font-size: 1.9rem;
+    display: none;
+    position: absolute;
+    top: 19%;
+    left: 50%;
+    /* transform: translateX(-10%); */
+    margin-bottom: 8px;
+    white-space: nowrap;
+    display: block;
+}
+
+.header_subtitle {
+    font-size: 1.7rem;
+    color: #cac5c5;
+}
