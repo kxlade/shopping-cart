@@ -1,0 +1,41 @@
+.body-cont {
+    background:
+        radial-gradient(1200px 600px at 10% -20%, rgba(255, 99, 71, 0.413), transparent 60%),
+        radial-gradient(800px 500px at 110% 0%, rgba(255, 193, 7, 0.557), transparent 55%),
+        #0f0f12;
+    padding: 20px 10px 30px;
+    font-size: large;
+    /* background-color: #2424; */
+}
+
+.body-head {
+    text-align: center;
+    font-size: 3rem;
+    border: #0f0f12 1px solid;
+    border-radius: 20px;
+    background:
+        radial-gradient(1200px 600px at 10% -20%, rgba(102, 71, 255, 0.15), transparent 60%),
+        radial-gradient(800px 500px at 110% 0%, rgba(255, 193, 7, 0.12), transparent 55%),
+        #0f0f12;
+    transition: all 0.7s;
+}
+
+.body-head:hover {
+    transform: translateY(-8px);
+}
+
+.body-para {
+    width: 60%;
+    letter-spacing: 0.4px;
+    justify-content: center;
+    justify-self: center;
+}
+
+.body-actions {
+    text-align: center;
+    padding: 15px;
+}
+
+.body-hint {
+    margin: 15px;
+}

@@ -8,10 +8,10 @@ const Navbar = ({ page, setPage }) => {
     const [showAbout, setShowAbout] = useState(false);
 
     const links = [
-        { name: "Home" },
-        { name: "About" },
+        { name: "Home"},
         { name: "Shop" },
-        { name: "Blog" }
+        { name: "About" },
+        { name: "Cart" }
     ];
 
     // This is the clean toggle function

@@ -1,0 +1,87 @@
+.card {
+    /* position: relative; */
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 280px;
+    transition: all 0.6s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
+}
+
+.card_badge {
+    /* position: absolute;
+    top: 14px;
+    right: 14px; */
+    background: #ff6347;
+    color: #0f0f12;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.25rem 0.55rem;
+    border-radius: 999px;
+}
+
+.card-visual {
+    /* height: 90px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    display: grid; */
+    place-items: center;
+}
+
+.card_emoji {
+    font-size: 2.2rem;
+}
+
+.card_info {
+    display: flex;
+    flex-direction: column;
+    font-style:normal;
+    font-weight: bold;
+    gap: 0.35rem;
+}
+
+.card_category {
+    margin: 0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #a8a8bb;
+}
+
+.card_name {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.card_description {
+    margin: 0;
+    color: #c7c7d6;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.card-rating_row {
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+    color: #ffd166;
+}
+.card_add-btn{
+    transition: all 0.6s;
+    margin: 10px;
+}
+.card_add-btn:active{
+    transform: translateY(-4px) scale(1.05);
+}
+.card_add-btn--added{
+    padding: 10px;
+    background-color: orangered;
+    margin: 5px;
+}

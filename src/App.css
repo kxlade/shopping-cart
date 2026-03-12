@@ -5,17 +5,27 @@
     margin-top: auto;
 }
 
+.footer_inner {
+    max-width: 1200px;
+    height: 250px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
 .footer-bottom {
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1.3rem;
     padding-top: 1.5rem;
-    border-top: 1px solid #333;
     font-size: 0.95rem;
 }
 
 .footer_social-btn {
     padding: 10px;
     border: none;
+    display: block;
     color: #fff;
     font-size: larger;
 }
@@ -26,6 +36,32 @@
     font-weight: bold;
     margin-left: 10%;
     text-decoration: underline #ff6347;
+}
+
+.footer_col-links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer_link-but {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
+
+.footer_link-but:hover {
+    color: #ff6347;
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #494949;
+    margin: 1.5rem 0;
 }
 
 .back-to-top {
@@ -55,8 +91,8 @@
     width: 100%;
     position: sticky;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
 }
 
 .navbar_logo {
@@ -153,4 +189,141 @@
 
 .about-text p {
     margin-bottom: 15px;
+}
+
+/* Product list */
+.product-list {
+    padding: 2.5rem 1rem 3.5rem;
+    background:
+        radial-gradient(1200px 600px at 10% -20%, rgba(255, 99, 71, 0.15), transparent 60%),
+        radial-gradient(800px 500px at 110% 0%, rgba(255, 193, 7, 0.12), transparent 55%),
+        #0f0f12;
+    color: #f7f7fb;
+}
+
+.product-list__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-list__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.product-list__title {
+    font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.product-list__count {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #c7c7d6;
+}
+
+.product-list__toolbar {
+    display: grid;
+    grid-template-columns: minmax(220px, 1.4fr) 1fr minmax(200px, 0.7fr);
+    gap: 1rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.product-list__search {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #fff;
+    padding: 0.7rem 0.9rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-list__search::placeholder {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.product-list__search:focus {
+    border-color: rgba(255, 99, 71, 0.7);
+    box-shadow: 0 0 0 3px rgba(255, 99, 71, 0.2);
+}
+
+.product-list__categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.product-list__category-btn {
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.06);
+    color: #f7f7fb;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.product-list__category-btn:hover {
+    transform: translateY(-1px);
+    border-color: rgba(255, 99, 71, 0.5);
+}
+
+.product-list__category-btn--active {
+    background: #ff6347;
+    border-color: #ff6347;
+    color: #0f0f12;
+    font-weight: 600;
+}
+
+.product-list__sort {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #fff;
+    padding: 0.7rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.product-list__sort option {
+    color: #0f0f12;
+}
+
+.product-list_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.product-list_empty {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+}
+
+.product-list_empty-text {
+    margin: 0;
+    color: #d0d0dc;
+}
+
+@media (max-width: 900px) {
+    .product-list__toolbar {
+        grid-template-columns: 1fr;
+    }
 }

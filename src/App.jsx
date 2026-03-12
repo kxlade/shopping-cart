@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import ProductList from './pages/ProductList';
 import Cart from "./pages/Cart";
 import AboutPage from './pages/About';
+import Body from './components/Body';
+
 
 // We'll create this component next if you don't have it yet
 // For now it's a placeholder so the app doesn't crash
@@ -47,7 +49,10 @@ function App() {
     <div className="app-wrapper">
       <Navbar page={page} setPage={setPage} />
 
-      <main className="content">{renderPage(page, setPage)}</main>
+      <main className="content">
+        {renderPage(page, setPage)}
+      </main>
+      <Body page={page} setPage={setPage} />
 
       <Footer setPage={setPage} />
     </div>
