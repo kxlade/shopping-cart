@@ -79,7 +79,18 @@ const products = [
         category: "Kitchen",
         reviews: 716,
         emoji: shopUnicode,
-        description: "Durable kitchen apron designed for comfort and stain prevention.",
+        description: "Durable luxurious kitchen spoon designed for comfort and stain prevention.",
+        badge: "Value"
+    },
+    {
+        id: 8,
+        name: "Kitchen Mop",
+        price: 130,
+        rating: 4.2,
+        category: "Stationery",
+        reviews: 716,
+        emoji: shopUnicode,
+        description: "Durable luxurious kitchen spoon designed for comfort and stain prevention.",
         badge: "Value"
     }
 ]

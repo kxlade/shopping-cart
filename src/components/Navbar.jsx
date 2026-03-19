@@ -1,7 +1,6 @@
 // Navbar.jsx
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import Button from "./Menu-Button";
 import { useState } from "react";
 
 const Navbar = ({ page, setPage }) => {
@@ -57,7 +56,7 @@ const Navbar = ({ page, setPage }) => {
 
 
                     {/* Use the toggle function here */}
-                    <Button onClick={toggleAbout} />
+                    {/* <Button onClick={toggleAbout} /> */}
                 </div>
             </div>
 
