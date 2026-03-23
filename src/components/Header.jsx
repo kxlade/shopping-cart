@@ -10,7 +10,6 @@ const Header = ({ setPage }) => {
 
 
 
-19.2.4
   return (
     <header className="header-cont">
       <div className="header_inner">
