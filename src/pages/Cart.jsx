@@ -5,7 +5,7 @@ const Cart = ({ setPage }) => {
 
   if (cart.length === 0) {
     return (
-      <div style={{ padding: "2rem", textAlign: "center" }}>
+      <div className="cart_empty">
         <h2>Your Cart is empty 😪</h2>
         <button onClick={() => setPage("shop")}>Continue Shopping</button>
       </div>
@@ -13,28 +13,22 @@ const Cart = ({ setPage }) => {
   }
 
   return (
-    <div style={{ padding: "2rem" }}>
-      <h2 style={{textAlign: "center" }}>Your Cart</h2>
-      <div style={{ marginTop: "1.5rem" }}>
+    <div className="cart">
+      <h2 className="cart_title">Your Cart</h2>
+      <div className="cart_list">
         {cart.map((item) => (
           <div
             key={item.id}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              padding: "0.75rem 0",
-              borderBottom: "1px solid #e6e6e6",
-            }}
+            className="cart_item"
           >
-            <div style={{ maxWidth: "60%" }}>
-              <div style={{ fontWeight: 600}}>{item.name}</div>
-              <div style={{ fontSize: "0.9rem", color: "#666" }}>
+            <div className="cart_item-info">
+              <div className="cart_item-name">{item.name}</div>
+              <div className="cart_item-price">
                 £ {item.price.toFixed(2)}
               </div>
             </div>
 
-            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", textAlign:"center" }}>
+            <div className="cart_item-actions">
               <button onClick={() => decrement(item.id)}>-</button>
               <span>{item.quantity}</span>
               <button onClick={() => increment(item.id)}>+</button>
@@ -45,7 +39,7 @@ const Cart = ({ setPage }) => {
         ))}
       </div>
 
-      <div style={{ marginTop: "1.5rem", fontWeight: 700 }}>
+      <div className="cart_total">
         Total: £ {totalPrice.toFixed(2)}
       </div>
     </div>

@@ -1,6 +1,7 @@
-﻿import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import products from "./product";
 import ProductCard from "../components/ProductCard";
+
 const ProductList = () => {
   const CATEGORIES = [
     "All",
@@ -14,22 +15,46 @@ const ProductList = () => {
 
   const [activeCategory, setActiveCategory] = useState("All");
   const [search, setSearch] = useState("");
+  const [debouncedSearch, setDebouncedSearch] = useState("");
+  const [sortBy, setSortBy] = useState("default");
 
-  const filteredProducts = products
-    .filter(
-      (product) =>
-        activeCategory === "All" || product.category === activeCategory,
-    )
-    .filter((product) => {
-      const name = product?.name ?? "";
-      const description = product?.description ?? "";
-      const term = search.toLowerCase();
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearch(search);
+    }, 200);
 
-      return (
-        name.toLowerCase().includes(term) ||
-        description.toLowerCase().includes(term)
-      );
-    });
+    return () => clearTimeout(timer);
+  }, [search]);
+
+  const filteredProducts = useMemo(() => {
+    const term = debouncedSearch.toLowerCase().trim();
+
+    let next = products
+      .filter(
+        (product) =>
+          activeCategory === "All" || product.category === activeCategory,
+      )
+      .filter((product) => {
+        const name = product?.name ?? "";
+        const description = product?.description ?? "";
+
+        return (
+          name.toLowerCase().includes(term) ||
+          description.toLowerCase().includes(term)
+        );
+      });
+
+    if (sortBy !== "default") {
+      next = [...next].sort((a, b) => {
+        if (sortBy === "price-asc") return a.price - b.price;
+        if (sortBy === "price-desc") return b.price - a.price;
+        if (sortBy === "rating") return (b.rating ?? 0) - (a.rating ?? 0);
+        return 0;
+      });
+    }
+
+    return next;
+  }, [activeCategory, debouncedSearch, sortBy]);
 
   const productsLength = filteredProducts.length;
 
@@ -60,7 +85,12 @@ const ProductList = () => {
               </button>
             ))}
           </div>
-          <select className="product-list__sort" id="prod-list_sort">
+          <select
+            className="product-list__sort"
+            id="prod-list_sort"
+            value={sortBy}
+            onChange={(event) => setSortBy(event.target.value)}
+          >
             <option value="default">Sort: Default</option>
             <option value="price-asc">Price: Low to High</option>
             <option value="price-desc">Price: High to Low</option>

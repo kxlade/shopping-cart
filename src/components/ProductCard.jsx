@@ -7,6 +7,7 @@ const ProductCard = ({ product }) => {
     const rating2 = 5 - Math.round(product.rating);
 
     const [added, setAdded] = useState(false);
+    const [imageError, setImageError] = useState(false);
     const { addItem } = useCart();
 
     const handleMouseMove = (event) => {
@@ -32,7 +33,18 @@ const ProductCard = ({ product }) => {
         <div className="card" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
             {product.badge && <span className="card_badge">{product.badge}</span>}
             <div className="card_visual">
-                <span className="card_emoji">{product.emoji}</span>
+                {product.imageUrl && !imageError ? (
+                    <img
+                        className="card_image"
+                        src={product.imageUrl}
+                        alt={product.imageAlt ?? product.name}
+                        loading="lazy"
+                        decoding="async"
+                        onError={() => setImageError(true)}
+                    />
+                ) : (
+                    <span className="card_emoji">{product.emoji}</span>
+                )}
             </div>
 
             <div className="card_info">
