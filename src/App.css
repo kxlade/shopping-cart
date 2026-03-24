@@ -456,11 +456,14 @@ hr {
     align-items: flex-start;
   }
 
-    .navbar_actions {
-        width: 100%;
-        flex-wrap: wrap;
-        gap: 30px;
-    }
+  .navbar_logo {
+    align-self: center;
+  }
+  .navbar_actions {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 
   .comic-button {
     font-size: 1rem;
@@ -484,10 +487,13 @@ hr {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     flex-wrap: nowrap;
-    padding-bottom: 4px;
-  }
-
-  .product-list__category-btn {
+    padding-bottom: 4px;<<<<<<< HEAD
+    gap: 35px;
+=======
+    gap: 30px;
+    padding: 20px;
+>>>>>>> 462862ddf5550aa022ae14acce37f9bfad0dae43
+-list__category-btn {
     flex: 0 0 auto;
   }
 
