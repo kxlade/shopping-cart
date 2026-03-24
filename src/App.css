@@ -456,14 +456,11 @@ hr {
     align-items: flex-start;
   }
 
-  .navbar_logo {
-    align-self: center;
-  }
-  .navbar_actions {
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 35px;
-  }
+    .navbar_actions {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
 
   .comic-button {
     font-size: 1rem;
