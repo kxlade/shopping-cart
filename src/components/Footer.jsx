@@ -29,7 +29,7 @@ const Footer = ({ setPage }) => {
     { icon: faGithub, link: "https://github.com/kxlade/shopping-cart" },
     { icon: faInstagram, link: "https://instagram.com/kxlxde" },
     { icon: faFacebook, link: "https://facebook.com" },
-    { icon: faXTwitter, link: "https://twitter.com" },
+    { icon: faXTwitter, link: "https://twitter.com/starboystill" },
   ];
 
 
